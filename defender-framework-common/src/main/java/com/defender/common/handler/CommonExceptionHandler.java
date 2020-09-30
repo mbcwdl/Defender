@@ -3,6 +3,7 @@ package com.defender.common.handler;
 import com.defender.common.exception.DefenderException;
 import com.defender.common.utils.ExceptionUtils;
 import com.defender.common.vo.R;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -11,12 +12,15 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @version 1.0
  * @since 2020/9/30 12:43
  */
+@Slf4j
 @RestControllerAdvice
 public class CommonExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public R error(Exception e) {
-        return R.error().message(ExceptionUtils.getMessage(e));
+        String message = ExceptionUtils.getMessage(e);
+        log.info(message);
+        return R.error().message(message);
     }
 
     @ExceptionHandler(DefenderException.class)
