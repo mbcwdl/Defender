@@ -47,6 +47,7 @@ public class User implements Serializable {
 
     @ApiModelProperty(value = "乐观锁")
     @Version
+    @JsonIgnore
     private Integer version;
 
     @ApiModelProperty(value = "逻辑删除")
