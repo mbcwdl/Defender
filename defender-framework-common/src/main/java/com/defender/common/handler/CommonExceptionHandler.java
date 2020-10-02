@@ -18,8 +18,8 @@ public class CommonExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public R error(Exception e) {
-        String message = ExceptionUtils.getMessage(e);
-        log.info(message);
+        log.info(ExceptionUtils.getMessage(e));
+        return R.error().message(e.getMessage());
         return R.error().message(message);
     }
 
