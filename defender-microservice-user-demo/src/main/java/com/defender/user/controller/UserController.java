@@ -35,7 +35,7 @@ import java.util.Map;
 @Slf4j
 @CrossOrigin
 @RestController
-@RequestMapping("user")
+@RequestMapping("users")
 public class UserController {
 
     @Autowired
