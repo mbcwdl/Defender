@@ -33,6 +33,7 @@ import java.util.Map;
  * @since 2020-09-30
  */
 @Slf4j
+@CrossOrigin
 @RestController
 @RequestMapping("user")
 public class UserController {
