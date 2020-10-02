@@ -20,7 +20,6 @@ public class CommonExceptionHandler {
     public R error(Exception e) {
         log.info(ExceptionUtils.getMessage(e));
         return R.error().message(e.getMessage());
-        return R.error().message(message);
     }
 
     @ExceptionHandler(DefenderException.class)
