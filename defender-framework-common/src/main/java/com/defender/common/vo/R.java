@@ -44,8 +44,8 @@ public class R {
      * @return
      */
     public static R ok() {
-        CommonResponseResultEnum rce = CommonResponseResultEnum.SUCCESS;
-        return new R(rce.getSuccess(), rce.getCode(), rce.getMessage());
+        CommonResponseResultEnum crr = CommonResponseResultEnum.SUCCESS;
+        return new R(crr.getSuccess(), crr.getCode(), crr.getMessage());
     }
 
     /**
@@ -53,17 +53,17 @@ public class R {
      * @return
      */
     public static R error() {
-        CommonResponseResultEnum rce = CommonResponseResultEnum.UNKNOWN_REASON;
-        return new R(rce.getSuccess(), rce.getCode(), rce.getMessage());
+        CommonResponseResultEnum crr = CommonResponseResultEnum.UNKNOWN_REASON;
+        return new R(crr.getSuccess(), crr.getCode(), crr.getMessage());
     }
 
     /**
      * 不携带额外数据。使用结果枚举对象来构建R对象
-     * @param rce
+     * @param crr
      * @return
      */
-    public static R setResult(CommonResponseResultEnum rce) {
-        return new R(rce.getSuccess(), rce.getCode(), rce.getMessage());
+    public static R setResult(CommonResponseResultEnum crr) {
+        return new R(crr.getSuccess(), crr.getCode(), crr.getMessage());
     }
 
     /**
