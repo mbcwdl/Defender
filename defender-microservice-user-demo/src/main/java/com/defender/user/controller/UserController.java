@@ -47,7 +47,7 @@ public class UserController {
 
         List<User> users = userService.list();
 
-        return R.ok().data("users",users);
+        return R.ok().data("users",users).message("成功查询到所有用户");
     }
 
     @ApiOperation(value = "查询某一用户")
@@ -77,7 +77,7 @@ public class UserController {
 
         User user = userService.getById(id);
 
-        return R.ok().data("user",user);
+        return R.ok().data("user",user).message("查询用户成功");
     }
 
     @ApiOperation(value = "新增用户")
@@ -90,7 +90,7 @@ public class UserController {
         userService.save(user);
 
         // 可以自定义状态码和消息
-        return R.ok().code(2000).message("新增用户成功");
+        return R.ok().code(200).message("新增用户成功");
     }
 
     /**
@@ -117,7 +117,7 @@ public class UserController {
 
         userService.updateById(user);
 
-        return R.ok();
+        return R.ok().message("修改用户成功");
     }
 
     @ApiOperation(value = "删除某一用户")
@@ -128,7 +128,7 @@ public class UserController {
 
         userService.removeById(id);
 
-        return R.ok();
+        return R.ok().message("删除用户成功");
     }
 
 
@@ -158,7 +158,7 @@ public class UserController {
         Map<String, Object> map = new HashMap<>();
         map.put("users", users);
 
-        return R.ok().data(map);
+        return R.ok().data(map).message("条件查询用户并分页成功");
     }
 }
 

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: defender-registry
+server:
+  port: 10086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://mbcwdl.space:10086/eureka
+    fetch-registry: false
+    register-with-eureka: false

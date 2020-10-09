@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 80
+zuul:
+  prefix: /api
+  # 设置微服务的路由
+  routes:
+    user-service: /defender-user/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://mbcwdl.space:10086/eureka
+    registry-fetch-interval-seconds: 5
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12500
+ribbon:
+  ConnectTimeout: 6000
+  ReadTimeout: 6000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0

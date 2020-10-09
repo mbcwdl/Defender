@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Defender.iml" filepath="$PROJECT_DIR$/.idea/Defender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defender-framework-common/defender-framework-common.iml" filepath="$PROJECT_DIR$/defender-framework-common/defender-framework-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defender-framework-parent/defender-framework-parent.iml" filepath="$PROJECT_DIR$/defender-framework-parent/defender-framework-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defender-microservice-gateway/defender-microservice-gateway.iml" filepath="$PROJECT_DIR$/defender-microservice-gateway/defender-microservice-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defender-microservice-registry/defender-microservice-registry.iml" filepath="$PROJECT_DIR$/defender-microservice-registry/defender-microservice-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/defender-microservice-user-demo/defender-microservice-user-demo.iml" filepath="$PROJECT_DIR$/defender-microservice-user-demo/defender-microservice-user-demo.iml" />
     </modules>
   </component>
 </project>
